@@ -28,8 +28,8 @@ jobs:
           uses: browser-actions/setup-chrome@v1 
         
         - name: Run tests
-          run: pytest -m smoke --html=report.html --self-contained-html /tests/
-        
+          run: pytest -m smoke tests/test_login.py --html=report/report.html --self-contained-html
+
         - name: Upload Test Report
           if: always()
           uses: actions/upload-artifact@v4

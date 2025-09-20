@@ -9,7 +9,7 @@ from pages.dashboard_page import DashboardPage
 
 @pytest.mark.usefixtures("setup")
 class TestOrange(BaseTest):
-    
+    @pytest.mark.smoke
     def test_login(self):
         login_page = LoginPage(self.driver)
         login_page.login("Admin", "admin123")
